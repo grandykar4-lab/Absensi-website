@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Absensi Ekstrakurikuler</title><link rel="stylesheet" href="style.css">
+</head><body><div class="wrap">
+<div class="brand" id="brand">Ekstrakurikuler</div>
+<div class="card">
+<h1>ABSENSI EKSTRAKURIKULER</h1>
+<label for="name">Nama Lengkap</label>
+<input id="name" maxlength="60" autocomplete="off" placeholder="Nama lengkap">
+<label for="cls">Kelas</label>
+<select id="cls"><option value="">Pilih kelas</option></select>
+<label for="pin">PIN Absensi</label>
+<input id="pin" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="6 digit angka">
+<button id="btn">ABSEN</button>
+<div id="msg" class="msg"></div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>

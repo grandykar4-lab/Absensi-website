@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard Pengurus</title><link rel="stylesheet" href="style.css">
+</head><body>
+<div class="wrap" id="loginBox">
+<div class="card"><h1>LOGIN PENGURUS</h1>
+<label for="email">Email</label><input id="email" type="email" autocomplete="username">
+<label for="pass">Password</label><input id="pass" type="password" autocomplete="current-password">
+<button id="loginBtn">MASUK</button><div id="loginMsg" class="msg"></div></div></div>
+
+<div class="wrap wide hide" id="dash">
+<div class="card">
+<div class="pin" id="pinView">------</div>
+<div class="timer" id="timer">Belum ada PIN aktif</div>
+<button id="newPin">BUAT PIN BARU</button>
+</div>
+<div class="card stat"><b id="count">0</b>siswa hadir</div>
+<div class="card">
+<div class="row">
+<input id="search" placeholder="Cari nama...">
+<select id="filter"><option value="">Semua kelas</option></select>
+<button class="sec" id="csv">Export CSV</button>
+<button class="red" id="reset">Reset Data Sesi</button>
+<button class="sec" id="logout">Keluar</button>
+</div>
+<div class="tbl"><table><thead><tr><th>No</th><th>Nama</th><th>Kelas</th><th>Jam Absen</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table></div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="admin.js"></script>
+</body></html>
