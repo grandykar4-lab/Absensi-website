@@ -29,7 +29,7 @@ $("newPin").onclick = async () => {
   if (error) return alert("Gagal membuat PIN: " + error.message);
   offset = new Date(r.now) - Date.now();
   session = { id: r.id, pin: r.pin, expires_at: r.expires_at };
-  data = []; render(); tick();
+  tick(); refresh();
 };
 
 function tick() {
