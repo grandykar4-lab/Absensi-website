@@ -5,7 +5,7 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const EKSKUL_NAME = "Karya Ilmiah Remaja";
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const CLASSES = [];
-[7, 8, 9].forEach(g => { for (let i = 1; i <= 11; i++) CLASSES.push(g + "-" + i); });
+[7, 8, 9].forEach(g => { const max = g === 9 ? 13 : 11; for (let i = 1; i <= max; i++) CLASSES.push(g + "-" + i); });
 function fillClasses(sel) {
   CLASSES.forEach(c => { const o = document.createElement("option"); o.value = o.textContent = c; sel.appendChild(o); });
 }
