@@ -11,7 +11,7 @@ async function init() {
 }
 $("loginBtn").onclick = async () => {
   const { error } = await sb.auth.signInWithPassword({ email: $("email").value.trim(), password: $("pass").value });
-  if (error) { const m = $("loginMsg"); m.className = "msg err"; m.textContent = "Email atau password salah."; return; }
+  if (error) { const m = $("loginMsg"); m.className = "msg err"; m.textContent = "Gagal login: " + error.message; return; }
   openDash();
 };
 $("logout").onclick = async () => { await sb.auth.signOut(); location.reload(); };
